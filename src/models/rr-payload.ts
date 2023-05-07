@@ -19,7 +19,7 @@ export class RRPayload {
     private readonly _payload: SupportedPayloadTypes,
     private _eventTime: number = Date.now(),
     private _medium: RRMessageMedium = RRMessageMedium.outgoing,
-    private _tag: string = 'default'
+    private _channel: string = 'default'
   ) {}
 
   /**
@@ -50,12 +50,12 @@ export class RRPayload {
   /**
    * The tag of the message.
    */
-  get tag(): string {
-    return this._tag;
+  get channel(): string {
+    return this._channel;
   }
 
-  set tag(value: string) {
-    this._tag = value;
+  set channel(value: string) {
+    this._channel = value;
   }
 
   /**
